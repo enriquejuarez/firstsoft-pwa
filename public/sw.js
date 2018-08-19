@@ -1,8 +1,6 @@
 
 const CACHE_NAME = 'firstsoft-pwa-cache-v1',
 	urlsToCache = [
-		'/',
-		'./',
 		'./?utm=homescreen',
 		'./index.html',
 		'./css/style.css',

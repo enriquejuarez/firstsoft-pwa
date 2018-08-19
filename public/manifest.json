@@ -1,8 +1,8 @@
 {
 	"name": "FirstSoft - Develop",
-	"short_name": "PWA Demo",
+	"short_name": "FirstSoft",
 	"description": "Desarrollo de Software",
-	"background_color": "#E98665",
+	"background_color": "#b3731b",
 	"theme_color": "#000",
 	"orientation": "portrait",
 	"display": "standalone",
