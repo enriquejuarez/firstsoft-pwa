@@ -761,6 +761,9 @@ img.persona:hover{
 .thumbnail2{
     position: relative;
 }
+.thumbnail2 a{
+    text-align: center;
+}
 
 a.thumb-info span.thumb-info-title {
     -moz-transition: all .3s;
@@ -799,3 +802,4 @@ span.thumb-info-type{
     padding: 2px 9px;
     text-transform: none;
 }
+
