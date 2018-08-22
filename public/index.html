@@ -46,6 +46,15 @@
         <link rel="icon" href="./favicon.png">
     </head>
     <body>
+
+     <!-- PRE LOADER -->
+     <section class="preloader">
+          <div class="spinner">
+
+               <span class="spinner-rotate"></span>
+
+          </div>
+     </section>
     <header id="home" class="gradient-red">
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
@@ -100,7 +109,7 @@
             </div>
         </div>
     </section><!-- end-section-home -->
-    <section id="develop" class="padding-top-bottom-120 bg-image-fit-50" style="background:url(images/1_back.png)">
+    <section id="develop" class="padding-top-bottom-120 ">
         <div class="container">
             <div class="heading-wraper text-left margin-bottom-80">
                 <h2 class="titlesection">Desarrollo de Software</h2>
@@ -135,6 +144,9 @@
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, maxime libero sequi. Odio expedita rem laudantium distinctio delectus eum, possimus, saepe eveniet qui totam ratione perspiciatis excepturi. Distinctio illum, veniam.</p>
                         </div>
                     </div>
+                </div>
+                <div class="col-sm-6 bg-image-fit-50" >
+                    <img src="./images/1_back.png" alt="Desarrollo web" class="img-responsive max-width-100">
                 </div>
             </div>
         </div>
@@ -180,9 +192,6 @@
             </div>
         </div>
     </section><!-- end-section-design -->
-    <section id="portfolio" class="padding-top-90 gradient-red">
-
-    </section>    <!-- end-section-portfolio -->
     <section id="pendiente" class="padding-top-bottom-30">
         <div class="container">
             <div class="heading-wraper text-center margin-bottom-80">
@@ -229,11 +238,11 @@
             </div>
         </div>
     </section><!-- end-section-pendiente -->
-    <section id="team" class="testimonial-section padding-top-bottom-30 gradient-red">
+    <section id="clients" class="testimonial-section padding-top-bottom-30 gradient-red">
         <div class="container">
             <div class="row">
                 <div class="span12">
-                    <h2 id="titleteam">Nuestro <strong>Equipo</strong></h2>
+                    <h2 id="titleteam">Nuestros <strong>Clientes</strong></h2>
                     <div class="row">
                         <ul class="team-list">
                         <li class="span3">
@@ -241,7 +250,7 @@
                                 <a href="#" class="thumb-info team">
                                     <img alt="" src="./images/person.png" class="persona">
                                     <!-- <i class="fa fa-user fa-5x" aria-hidden="true"></i> -->
-                                    <span class="thumb-info-title"><span class="thumb-info-inner">Ing. César</span><span class="thumb-info-type">Director Ejecutivo</span></span>
+                                    <span class="thumb-info-title"><span class="thumb-info-inner">Corporativo Mega</span><span class="thumb-info-type">Página web</span></span>
                                 </a>
                             </div>
                         </li>
@@ -250,7 +259,7 @@
                                 <a href="#" class="thumb-info team">
                                     <img alt="" src="./images/person.png" class="persona">
                                     <!-- <i class="fa fa-user fa-5x" aria-hidden="true"></i> -->
-                                    <span class="thumb-info-title"><span class="thumb-info-inner">Ing. Erick</span><span class="thumb-info-type">Director de Tecnología</span></span>
+                                    <span class="thumb-info-title"><span class="thumb-info-inner">Abarrotes Garza</span><span class="thumb-info-type">Sistema Inventario</span></span>
                                 </a>
                             </div>
                         </li>
@@ -260,7 +269,7 @@
                                     <img alt="" src="./images/person.png" class="persona">
                                     <!-- <i class="fa fa-user fa-5x" aria-hidden="true"></i> -->
                                     <span class="thumb-info-title">
-                                        <span class="thumb-info-inner">Ing. Sebastian</span><span class="thumb-info-type">Director de Proyectos</span>
+                                        <span class="thumb-info-inner">Social Across</span><span class="thumb-info-type">App. Web Progresiva</span>
                                     </span>
                                 </a>
                             </div>
@@ -271,7 +280,7 @@
                                     <img alt="" src="./images/person.png" class="persona">
                                     <!-- <i class="fa fa-user fa-5x" aria-hidden="true"></i> -->
                                     <span class="thumb-info-title">
-                                        <span class="thumb-info-inner">Carmen</span><span class="thumb-info-type">Directora Comercial</span>
+                                        <span class="thumb-info-inner">FerreMark</span><span class="thumb-info-type">Punto de Venta</span>
                                     </span>
                                 </a>
                             </div>
@@ -283,43 +292,27 @@
             </div>
         </div>
     </section><!-- end-section-team -->
-    <!-- <section id="customer-support" class="overflow-x-hidden">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="image-wraper">
-            <img class="img-responsive" src="images/support.png" alt="">
-          </div>
-        </div>
-        <div class="col-md-5">
-          <div class="customer-support-content padding-top-bottom-120 sm-padding-top-bottom-50-75">
-            <h4>24/7 Customer Support</h4>
-            <p class="margin-top-bottom-30">Built using the latest web technologies like html5, css3, and jQuery, rest assured Sedna will look smashing on every device under the sun.Built using the latest web technologies like html5, css3, and jQuery, rest assured Sedna will look smashing on every device under the sun.</p>
-            <a class="btn btn-orange border-none btn-rounded-corner" href="#">need our help ? let's chat<span class="icon-on-button"><i class="ion-ios-arrow-thin-right"></i></span></a>
-          </div>
-        </div>
-      </div>
-    </section> -->
-    <section id="contact" class="padding-top-bottom-120 newsletter">
+    <section id="contact" data-stellar-background-ratio="0.5" class="padding-top-bottom-30">
         <div class="container">
-            <div class="row">
-                <div class="col-md-8 sunscription-wraper-outer col-md-offset-2 bg-fit" style="background:url(images/newsletter.png)">
-                    <div class="row">
-                        <div class="col-md-8 col-md-offset-2 padding-top-bottom-30">
-                            <div class="subscription-wraper text-center">
-                                <h4 class="text-upper">Subscribe newslatter</h4>
-                                <p>Enter your email address for our weekly new update</p>
-                                <form class="subscription-form">
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-                                    </div>
-                                    <a class="btn btn-orange border-none btn-rounded-corner" href="#">Subscribe  now<span class="icon-on-button"><i class="ion-ios-arrow-thin-right"></i></span></a>
-                                </form>
-                            </div>
+            <h2 class="titlesection">Contáctanos</h2>
+               <div class="row">
+                    <form action="#" method="post" class="wow fadeInUp" id="contact-form" role="form" data-wow-delay="0.8s">
+                        <h6 class="text-success">Tu mensaje ha sido enviado.</h6>
+                        <h6 class="text-danger">Error al enviar el mensaje</h6>
+                        <div class="col-md-6 col-sm-6">
+                            <input type="text" class="form-control" id="cf-name" name="name" placeholder="Nombre completo">
                         </div>
-                    </div>
+                        <div class="col-md-6 col-sm-6">
+                            <input type="email" class="form-control" id="cf-email" name="email" placeholder="Correo">
+                        </div>
+                        <div class="col-md-12 col-sm-12">
+                            <input type="text" class="form-control" id="cf-subject" name="subject" placeholder="Tema">
+                            <textarea class="form-control" rows="6" id="cf-message" name="message" placeholder="Descripción"></textarea>
+                            <button type="submit" class="" id="cf-submit" name="submit">Enviar</button>
+                        </div>
+                    </form>
                 </div>
             </div>
-        </div>
     </section><!-- end-section-contact -->
     <footer class="padding-top-120">
         <div class="container">
@@ -356,7 +349,7 @@
                 <p class="text-uppercase">Todos los derechos reservados <a href="#">FirstSoft</a></p>
             </div>
         </div>
-    </footer>
+    </footer><!-- end-footer -->
     <div id="scroll-top-div" class="scroll-top-div">
         <div class="scroll-top-icon-container">
             <i class="fa fa-arrow-circle-up"></i>

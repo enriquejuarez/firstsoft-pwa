@@ -1,5 +1,10 @@
+  // // PRE LOADER
+  //   $(window).load(function(){
+  //     //$('.preloader').fadeOut(500); // set duration in brackets
+  //     console.log("Se termina de cargar la pagina");
+  //   });
 $(document).ready(function() {
-
+$('.preloader').fadeOut(1000); // set duration in brackets
 	// OWL CAROUSEL INSTALLATION
 	$("#testimonial-carousel").owlCarousel({
 		items:1,
@@ -349,3 +354,6 @@ var TxtType = function(el, toRotate, period) {
         })
     }
 })(document, window, navigator, console.log);
+
+
+
