@@ -1,12 +1,8 @@
-  // // PRE LOADER
-  //   $(window).load(function(){
-  //     //$('.preloader').fadeOut(500); // set duration in brackets
-  //     console.log("Se termina de cargar la pagina");
-  //   });
+
 $(document).ready(function() {
-$('.preloader').fadeOut(1000); // set duration in brackets
+    //$('.preloader').fadeOut(1000); // set duration in brackets
 	// OWL CAROUSEL INSTALLATION
-	$("#testimonial-carousel").owlCarousel({
+    $("#testimonial-carousel").owlCarousel({
 		items:1,
 		itemsDesktop : [1000,1], //5 items between 1000px and 901px
       	itemsDesktopSmall : [900,1], // betweem 900px and 601px
@@ -25,7 +21,6 @@ $('.preloader').fadeOut(1000); // set duration in brackets
 		navigationText:["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"]
 
 	});
-
 	/* Navigation Menu*/
 	var offsettop = $('.navbar').offset().top;
 	if (offsettop > 50) {
@@ -50,27 +45,20 @@ $('.preloader').fadeOut(1000); // set duration in brackets
 	        $("#scroll-top-div").fadeOut('500');
 	    }
 	});
-
-
-
 	/* SMOOTH SCROLLING SCRIPT*/
 	// Add smooth scrolling to all links
 	$(".navbar-nav li a").on('click', function(event) {
-
 		// Make sure this.hash has a value before overriding default behavior
 		if (this.hash !== "") {
 			// Prevent default anchor click behavior
 			event.preventDefault();
-
 			// Store hash
 			var hash = this.hash;
-
 			// Using jQuery's animate() method to add smooth page scroll
 			// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
 			$('html, body').animate({
 				scrollTop: $(hash).offset().top
 			}, 800, function(){
-
 				// Add hash (#) to URL when done scrolling (default click behavior)
 				window.location.hash = hash;
 			});
@@ -78,16 +66,13 @@ $('.preloader').fadeOut(1000); // set duration in brackets
 	});
 
 	/****************************BACK TO TOP************************************/
-	$('#scroll-top-div').on('click', function (e) {
+	$('#scroll-top-div,#logo').on('click', function (e) {
         e.preventDefault();
         $('html,body').animate({
             scrollTop: 0
         }, 700);
     });
 
-});
-
-jQuery(document).ready(function($){
     //set animation timing
     var animationDelay = 2500,
         //loading bar effect
@@ -104,7 +89,6 @@ jQuery(document).ready(function($){
         revealAnimationDelay = 1500;
 
     initHeadline();
-
 
     function initHeadline() {
         //insert <i> element for each letter of a changing word
@@ -131,7 +115,6 @@ jQuery(document).ready(function($){
         var duration = animationDelay;
         $headlines.each(function(){
             var headline = $(this);
-
             if(headline.hasClass('loading-bar')) {
                 duration = barAnimationDelay;
                 setTimeout(function(){ headline.find('.cd-words-wrapper').addClass('is-loading') }, barWaiting);
@@ -149,7 +132,6 @@ jQuery(document).ready(function($){
                 });
                 headline.find('.cd-words-wrapper').css('width', width);
             };
-
             //trigger animation
             setTimeout(function(){ hideWord( headline.find('.is-visible').eq(0) ) }, duration);
         });
@@ -157,7 +139,6 @@ jQuery(document).ready(function($){
 
     function hideWord($word) {
         var nextWord = takeNext($word);
-
         if($word.parents('.cd-headline').hasClass('type')) {
             var parentSpan = $word.parent('.cd-words-wrapper');
             parentSpan.addClass('selected').removeClass('waiting');
@@ -166,24 +147,20 @@ jQuery(document).ready(function($){
                 $word.removeClass('is-visible').addClass('is-hidden').children('i').removeClass('in').addClass('out');
             }, selectionDuration);
             setTimeout(function(){ showWord(nextWord, typeLettersDelay) }, typeAnimationDelay);
-
         } else if($word.parents('.cd-headline').hasClass('letters')) {
             var bool = ($word.children('i').length >= nextWord.children('i').length) ? true : false;
             hideLetter($word.find('i').eq(0), $word, bool, lettersDelay);
             showLetter(nextWord.find('i').eq(0), nextWord, bool, lettersDelay);
-
         }  else if($word.parents('.cd-headline').hasClass('clip')) {
             $word.parents('.cd-words-wrapper').animate({ width : '2px' }, revealDuration, function(){
                 switchWord($word, nextWord);
                 showWord(nextWord);
             });
-
         } else if ($word.parents('.cd-headline').hasClass('loading-bar')){
             $word.parents('.cd-words-wrapper').removeClass('is-loading');
             switchWord($word, nextWord);
             setTimeout(function(){ hideWord(nextWord) }, barAnimationDelay);
             setTimeout(function(){ $word.parents('.cd-words-wrapper').addClass('is-loading') }, barWaiting);
-
         } else {
             switchWord($word, nextWord);
             setTimeout(function(){ hideWord(nextWord) }, animationDelay);
@@ -204,13 +181,11 @@ jQuery(document).ready(function($){
 
     function hideLetter($letter, $word, $bool, $duration) {
         $letter.removeClass('in').addClass('out');
-
         if(!$letter.is(':last-child')) {
             setTimeout(function(){ hideLetter($letter.next(), $word, $bool, $duration); }, $duration);
         } else if($bool) {
             setTimeout(function(){ hideWord(takeNext($word)) }, animationDelay);
         }
-
         if($letter.is(':last-child') && $('html').hasClass('no-csstransitions')) {
             var nextWord = takeNext($word);
             switchWord($word, nextWord);
@@ -219,7 +194,6 @@ jQuery(document).ready(function($){
 
     function showLetter($letter, $word, $bool, $duration) {
         $letter.addClass('in').removeClass('out');
-
         if(!$letter.is(':last-child')) {
             setTimeout(function(){ showLetter($letter.next(), $word, $bool, $duration); }, $duration);
         } else {
@@ -240,10 +214,9 @@ jQuery(document).ready(function($){
         $oldWord.removeClass('is-visible').addClass('is-hidden');
         $newWord.removeClass('is-hidden').addClass('is-visible');
     }
-});
 
-/*Animation typewriter style using css steps()*/
-var TxtType = function(el, toRotate, period) {
+    /*Animation typewriter style using css steps()*/
+    var TxtType = function(el, toRotate, period) {
         this.toRotate = toRotate;
         this.el = el;
         this.loopNum = 0;
@@ -256,20 +229,15 @@ var TxtType = function(el, toRotate, period) {
     TxtType.prototype.tick = function() {
         var i = this.loopNum % this.toRotate.length;
         var fullTxt = this.toRotate[i];
-
         if (this.isDeleting) {
         this.txt = fullTxt.substring(0, this.txt.length - 1);
         } else {
         this.txt = fullTxt.substring(0, this.txt.length + 1);
         }
-
         this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-
         var that = this;
         var delta = 200 - Math.random() * 100;
-
         if (this.isDeleting) { delta /= 2; }
-
         if (!this.isDeleting && this.txt === fullTxt) {
         delta = this.period;
         this.isDeleting = true;
@@ -278,19 +246,18 @@ var TxtType = function(el, toRotate, period) {
         this.loopNum++;
         delta = 500;
         }
-
         setTimeout(function() {
         that.tick();
         }, delta);
     };
 
-    window.onload = function() {
+    //window.onload = function() {
         var elements = document.getElementsByClassName('typewrite');
         for (var i=0; i<elements.length; i++) {
             var toRotate = elements[i].getAttribute('data-type');
             var period = elements[i].getAttribute('data-period');
             if (toRotate) {
-              new TxtType(elements[i], JSON.parse(toRotate), period);
+                new TxtType(elements[i], JSON.parse(toRotate), period);
             }
         }
         // INJECT CSS
@@ -305,41 +272,46 @@ var TxtType = function(el, toRotate, period) {
         // type one text in the typwriter
         // keeps calling itself until the text is finished
         function typeWriter(text, i, fnCallback) {
-        // chekc if text isn't finished yet
-        if (i < (text.length)) {
-          // add next character to h1
-         document.querySelector("h2").innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
+            // chekc if text isn't finished yet
+            if (i < (text.length)) {
+                // add next character to h1
+                document.querySelector("h2").innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
 
-          // wait for a while and call this function again for next character
-          setTimeout(function() {
-            typeWriter(text, i + 1, fnCallback)
-          }, 100);
+                // wait for a while and call this function again for next character
+                setTimeout(function() {
+                    typeWriter(text, i + 1, fnCallback)
+                }, 100);
+            }
+            // text finished, call callback if there is a callback function
+            else if (typeof fnCallback == 'function') {
+                // call callback after timeout
+                setTimeout(fnCallback, 700);
+            }
         }
-        // text finished, call callback if there is a callback function
-        else if (typeof fnCallback == 'function') {
-          // call callback after timeout
-          setTimeout(fnCallback, 700);
-        }
-        }
+
         // start a typewriter animation for a text in the dataText array
         function StartTextAnimation(i) {
-         if (typeof dataText[i] == 'undefined'){
-            setTimeout(function() {
-              StartTextAnimation(0);
-            }, 20000);
-         }
-         // check if dataText[i] exists
-        if (i < dataText[i].length) {
-          // text exists! start typewriter animation
-         typeWriter(dataText[i], 0, function(){
-           // after callback (and whole text has been animated), start next text
-           StartTextAnimation(i + 1);
-         });
+            console.log(dataText[i]);
+            if (typeof dataText[i] == 'undefined'){
+                setTimeout(function() {
+                    StartTextAnimation(0);
+                }, 20000);
+            }
+            // check if dataText[i] exists
+            if (i < dataText[i].length) {
+                // text exists! start typewriter animation
+                typeWriter(dataText[i], 0, function(){
+                    // after callback (and whole text has been animated), start next text
+                    StartTextAnimation(i + 1);
+                });
+            }
         }
-        }
+
         // start the text animation
         StartTextAnimation(0);
-    };
+    //}
+
+});
 
 /**************************************PWA****************************************************************/
 ((d, w, n, c) => {

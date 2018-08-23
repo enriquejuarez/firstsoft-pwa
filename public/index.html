@@ -33,7 +33,7 @@
         <meta property="og:type" content="website">
         <meta property="og:image" content="./images/icons/icon_128x128.png">
         <meta property="og:site_name" content="http://firstsoft.com.mx">
-        <!-- Estilos -->
+        <!-- styles -->
         <link rel="stylesheet" href="./css/bootstrap.min.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
@@ -41,24 +41,21 @@
         <link rel="stylesheet" href="./css/owl.carousel.css">
         <link rel="stylesheet" href="./css/owl.theme.css">
         <link rel="stylesheet" href="./css/bootstrap-responsive.css">
+        <link rel="stylesheet" href="./css/normalize.css">
         <link rel="stylesheet" href="./css/style.css">
 
         <link rel="icon" href="./favicon.png">
     </head>
     <body>
-
      <!-- PRE LOADER -->
-     <section class="preloader">
-          <div class="spinner">
-
-               <span class="spinner-rotate"></span>
-
-          </div>
-     </section>
+    <!-- <section class="preloader">
+        <div class="spinner">
+            <span class="spinner-rotate"></span>
+        </div>
+    </section> -->
     <header id="home" class="gradient-red">
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                         <span class="sr-only">Toggle navigation</span>
@@ -66,25 +63,23 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="#home" id="logo">
                         <span class="logo-wraper logo-white">
-                            <img src="images/Logo.png" alt="">FirstSoft
+                            <img src="images/Logo.png" alt="logo">FirstSoft
                         </span>
                     </a>
                 </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav  navbar-right">
                         <li class="active"><a href="#home">Inicio <span class="sr-only">(current)</span></a></li>
-                        <li><a href="#introduction">Desarrollo de Software</a></li>
+                        <li><a href="#develop">Software</a></li>
                         <li><a href="#design">Diseño Gráfico</a></li>
-                        <li><a href="#">Portafolio</a></li>
-                        <li><a href="#">Nuestro Equipo</a></li>
-                        <li><a href="#newsletter">Contáctanos</a></li>
+                        <li><a href="#clients">Clientes</a></li>
+                        <li><a href="#contact">Contacto</a></li>
                     </ul>
-                </div><!-- /.navbar-collapse -->
+                </div>
                 <hr class="navbar-divider">
-            </div><!-- /.container-fluid -->
+            </div>
         </nav>
     </header>
     <section id="home" class="gradient-red padding-top-90 home-slider">
@@ -109,7 +104,7 @@
             </div>
         </div>
     </section><!-- end-section-home -->
-    <section id="develop" class="padding-top-bottom-120 ">
+    <section id="develop" class="padding-top-bottom-90">
         <div class="container">
             <div class="heading-wraper text-left margin-bottom-80">
                 <h2 class="titlesection">Desarrollo de Software</h2>
@@ -159,7 +154,7 @@
             </div>
             <div class="row">
                 <div class="col-md-4">
-                    <img class="img-responsive sm-display-none" src="images/hand_phone.png" alt="">
+                    <img class="img-responsive" src="images/hand_phone.png" alt="">
                 </div>
                 <div class="col-md-8">
                     <div class="row">
@@ -192,7 +187,7 @@
             </div>
         </div>
     </section><!-- end-section-design -->
-    <section id="pendiente" class="padding-top-bottom-30">
+    <!-- <section id="pendiente" class="padding-top-bottom-30">
         <div class="container">
             <div class="heading-wraper text-center margin-bottom-80">
                 <h2 class="titlesection">Pendiente</h2>
@@ -237,8 +232,8 @@
                 </div>
             </div>
         </div>
-    </section><!-- end-section-pendiente -->
-    <section id="clients" class="testimonial-section padding-top-bottom-30 gradient-red">
+    </section> --><!-- end-section-pendiente -->
+    <section id="clients" class="testimonial-section padding-top-bottom-90 gradient-red">
         <div class="container">
             <div class="row">
                 <div class="span12">
@@ -248,8 +243,7 @@
                         <li class="span3">
                             <div class="team-item thumbnail2">
                                 <a href="#" class="thumb-info team">
-                                    <img alt="" src="./images/person.png" class="persona">
-                                    <!-- <i class="fa fa-user fa-5x" aria-hidden="true"></i> -->
+                                    <img alt="" src="./images/person.png" class="persona max-width-50">
                                     <span class="thumb-info-title"><span class="thumb-info-inner">Corporativo Mega</span><span class="thumb-info-type">Página web</span></span>
                                 </a>
                             </div>
@@ -257,8 +251,7 @@
                         <li class="span3">
                             <div class="team-item thumbnail2">
                                 <a href="#" class="thumb-info team">
-                                    <img alt="" src="./images/person.png" class="persona">
-                                    <!-- <i class="fa fa-user fa-5x" aria-hidden="true"></i> -->
+                                    <img alt="" src="./images/person.png" class="persona max-width-50">
                                     <span class="thumb-info-title"><span class="thumb-info-inner">Abarrotes Garza</span><span class="thumb-info-type">Sistema Inventario</span></span>
                                 </a>
                             </div>
@@ -266,8 +259,7 @@
                         <li class="span3">
                             <div class="team-item thumbnail2">
                                 <a href="#" class="thumb-info team">
-                                    <img alt="" src="./images/person.png" class="persona">
-                                    <!-- <i class="fa fa-user fa-5x" aria-hidden="true"></i> -->
+                                    <img alt="" src="./images/person.png" class="persona max-width-50">
                                     <span class="thumb-info-title">
                                         <span class="thumb-info-inner">Social Across</span><span class="thumb-info-type">App. Web Progresiva</span>
                                     </span>
@@ -277,8 +269,7 @@
                         <li class="span3">
                             <div class="team-item thumbnail2">
                                 <a href="#" class="thumb-info team">
-                                    <img alt="" src="./images/person.png" class="persona">
-                                    <!-- <i class="fa fa-user fa-5x" aria-hidden="true"></i> -->
+                                    <img alt="" src="./images/person.png" class="persona max-width-50">
                                     <span class="thumb-info-title">
                                         <span class="thumb-info-inner">FerreMark</span><span class="thumb-info-type">Punto de Venta</span>
                                     </span>
@@ -292,7 +283,7 @@
             </div>
         </div>
     </section><!-- end-section-team -->
-    <section id="contact" data-stellar-background-ratio="0.5" class="padding-top-bottom-30">
+    <section id="contact" data-stellar-background-ratio="0.5" class="padding-top-bottom-90">
         <div class="container">
             <h2 class="titlesection">Contáctanos</h2>
                <div class="row">
@@ -308,7 +299,7 @@
                         <div class="col-md-12 col-sm-12">
                             <input type="text" class="form-control" id="cf-subject" name="subject" placeholder="Tema">
                             <textarea class="form-control" rows="6" id="cf-message" name="message" placeholder="Descripción"></textarea>
-                            <button type="submit" class="" id="cf-submit" name="submit">Enviar</button>
+                            <button type="submit" class="btn" id="cf-submit" name="submit">Enviar</button>
                         </div>
                     </form>
                 </div>
@@ -334,7 +325,7 @@
                         <div class="col-md-12 col-sm-6">
                             <div class="footer-list-wiget">
                                 <h4 class="text-center">Síguenos en:</h4>
-                                <ul class="social-buttons" id="demo2">
+                                <ul class="social-buttons" id="social">
                                     <li><a href="#" class="brandico-twitter-bird" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
                                     <li><a href="#" class="brandico-facebook" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
                                     <li><a href="#" class="brandico-linkedin" target="_blank" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
