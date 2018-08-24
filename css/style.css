@@ -275,7 +275,7 @@ img.persona{
     max-width: 100%;
     filter: gray;
     -webkit-filter: grayscale(1);
-    -webkit-transition: all .5s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
 }
 img.persona:hover{
     -webkit-filter: grayscale(0);
@@ -688,7 +688,9 @@ ul#social li:hover a {
 	position: absolute;
 	right: 0;
 }
-
+#logo:hover{
+    animation: spinner 5s linear;
+}
 /*********************************************PRE LOADER************************************************************/
 .preloader {
     position: fixed;

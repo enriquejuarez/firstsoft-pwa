@@ -276,7 +276,6 @@ $(document).ready(function() {
             if (i < (text.length)) {
                 // add next character to h1
                 document.querySelector("h2").innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
-
                 // wait for a while and call this function again for next character
                 setTimeout(function() {
                     typeWriter(text, i + 1, fnCallback)
@@ -291,7 +290,6 @@ $(document).ready(function() {
 
         // start a typewriter animation for a text in the dataText array
         function StartTextAnimation(i) {
-            console.log(dataText[i]);
             if (typeof dataText[i] == 'undefined'){
                 setTimeout(function() {
                     StartTextAnimation(0);
@@ -323,6 +321,16 @@ $(document).ready(function() {
                     c('Service Worker registrado con éxito', registration.scope)
                 })
                 .catch(err => c('Registro de Serive Worker fallido', err))
+        })
+    }
+    //Activacion de permiso para notificaciones
+    if (w.Notification && Notification.permission !== 'denied'){
+        Notification.requestPermission(status => {
+            c(status)
+            let n = new Notification('FirstSoft', {
+                body: 'Nuestra experiencia nos respalda',
+                icon: './images/icons/icon_64x64.png'
+            })
         })
     }
 })(document, window, navigator, console.log);
