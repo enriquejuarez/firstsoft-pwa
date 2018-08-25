@@ -32,6 +32,11 @@ $(document).ready(function() {
         $('.navbar').removeClass('gradient-red');
         $("#scroll-top-div").fadeOut('500');
     }
+    $('.navbar-nav li a').click(function(){
+        var $target = $($(this).data('target'));
+        if(!$target.hasClass('in'))
+            $('.container .in').removeClass('in').height(0);
+        });
 	var num = 50; //number of pixels before modifying styles
 
 	$(window).bind('scroll', function () {
@@ -308,6 +313,17 @@ $(document).ready(function() {
         // start the text animation
         StartTextAnimation(0);
     //}
+    $('#testimonial-slider').owlCarousel({
+            items:1,
+            itemsDesktop:[1000,1],
+            itemsDesktopSmall:[979,1],
+            itemsTablet:[768,1],
+            pagination: false,
+            navigation:false,
+            navigationText:["",""],
+            slideSpeed:1000,
+            autoPlay:true
+        });
 
 });
 
