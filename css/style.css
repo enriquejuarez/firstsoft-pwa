@@ -39,7 +39,7 @@ ul.team-list {
 }
 .titlesection{
     color: #e9501d;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
 }
 .btn{
@@ -176,6 +176,17 @@ header{
 }
 .feature-wiget h4{
 	text-transform: uppercase;
+}
+h4 i{
+    margin-left: 15px;
+}
+.heading-wraper h4{
+    color: #e96133;
+    font-size: 23px;
+}
+.service-title{
+    color: #e96133;
+    font-size: 19px;
 }
 .bottom-line{
 	position: relative;
@@ -319,10 +330,16 @@ header{
 }
 #contact .form-control:hover,
 #contact .form-control:focus {
-    border-bottom-color: #c9c9c9;
+    border-bottom-color: #C9C9C9;
 }
 #contact input {
     height: 55px;
+}
+#contact input:focus {
+    border-bottom:1px solid rgba(233,80,29,.8) !important;
+}
+#contact textarea:focus{
+    border-bottom:1px solid rgba(233,80,29,.8) !important;
 }
 #contact button#cf-submit {
     background: #ce3232;
@@ -709,7 +726,7 @@ ul#social li:hover a {
     to {transform: rotate(360deg);}
 }
 /*******************************************MEDIA QUERIES*************************************************/
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .sm-padding-top-bottom-50-75 {
         padding-top: 50px;
         padding-bottom: 75px;
@@ -761,9 +778,6 @@ ul#social li:hover a {
     .navbar-nav{
         margin-left: 50px;
     }
-   /* h2 span{
-        font-size: 5px;
-    }*/
     .navbar{
         background: -moz-linear-gradient( 135deg, rgb(255,116,0,1) 0%, rgb(255,116,0,1) 35%, rgb(255,116,0) 100%);
         background: -webkit-linear-gradient( 135deg, rgb(255,116,0,1) 0%, rgb(255,116,0,1) 35%, rgb(255,116,0) 100%);
@@ -778,8 +792,31 @@ ul#social li:hover a {
     .logo-colored img, .logo-white img{
         max-height: 40px;
     }
+    .logo-colored,.logo-white{
+        font-size: 21px;
+    }
+    .navbar-default .navbar-nav>li>a{
+        font-size: 13px;
+    }
+    .titlesection{
+        font-size: 25px;
+    }
+    p{
+        font-size: 16px;
+    }
+    .testimonial .testimonial-content{
+        letter-spacing: normal;
+        line-height: normal;
+    }
+    .testimonial .pic{
+        width: 100px;
+        height: 100px;
+    }
+    .testimonial h3{
+        font-size: 20px;
+    }
 }
-@media screen and (min-width: 769px){
+@media (min-width: 769px){
     .image-right-slide-wraper{
         display: table;
         width: 100%;
@@ -801,7 +838,6 @@ ul#social li:hover a {
 @media (max-width: 1145px){
 
 }
-
 @media (max-width: 1055px){
     .logo-wraper{
         margin-left: 30px;
@@ -815,7 +851,7 @@ ul#social li:hover a {
 
 }
 @media (max-width: 780px){
-.logo-wraper{
+    .logo-wraper{
         margin-left: 70px;
     }
     .navbar-toggle{
@@ -827,10 +863,79 @@ ul#social li:hover a {
 
 }
 @media (max-width: 411px){
-
+    .logo-colored, .logo-white{
+        font-size: 17px;
+    }
+    .navbar-default .navbar-nav>li>a{
+        font-size: 10px;
+        padding: 3px 0 3px 0;
+    }
+    .colored-nav{
+        padding: 5px;
+    }
+    .titlesection{
+        font-size: 20px;
+    }
+    p{
+        font-size: 14px;
+    }
+    .testimonial .testimonial-content{
+        margin: 0;
+        padding: 0;
+    }
+    .testimonial .pic{
+        width: 80px;
+        height: 80px;
+    }
+    .testimonial h3{
+        font-size: 15px;
+    }
+    .testimonial p{
+        margin-top: 0;
+        padding: 0;
+    }
+    .testimonial-title{
+        margin: 0;
+    }
+    .testimonial .testimonial-title a, .testimonial .testimonial-title small{
+        font-size: 14px
+    }
+    .footer-list-wiget h4{
+        font-size: 15px;
+    }
+    ul.social-buttons{
+        margin-top: 10px;
+    }
+    ul.social-buttons li a{
+        width: 36px;
+        height: 36px;
+    }
+    .padding-top-bottom-90{
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
 }
 
-@media (max-width: 371px){
-
+@media (max-width: 330px){
+    .titlesection{
+        font-size: 15px;
+    }
+    .footer-divider p{
+        font-size: 10px;
+    }
+    .footer-left-content{
+        margin-bottom: 0px;
+    }
+    #contact button#cf-submit {
+        font-weight: bold;
+        height: 30px;
+        width: 60px;
+        font-size: 13px;
+        font-weight: normal;
+        padding: 0;
+    }
+    .testimonial{
+        padding: 10px 5px;
+    }
 }
 
