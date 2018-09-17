@@ -19,7 +19,6 @@ $(document).ready(function() {
 		pagination:false,
 		navigation:true,
 		navigationText:["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"]
-
 	});
 	/* Navigation Menu*/
 	var offsettop = $('.navbar').offset().top;
@@ -314,16 +313,26 @@ $(document).ready(function() {
         StartTextAnimation(0);
     //}
     $('#testimonial-slider').owlCarousel({
-            items:1,
-            itemsDesktop:[1000,1],
-            itemsDesktopSmall:[979,1],
-            itemsTablet:[768,1],
-            pagination: false,
-            navigation:false,
-            navigationText:["",""],
-            slideSpeed:1000,
-            autoPlay:true
-        });
+        items:1,
+        itemsDesktop:[1000,1],
+        itemsDesktopSmall:[979,1],
+        itemsTablet:[768,1],
+        pagination: false,
+        navigation:false,
+        navigationText:["",""],
+        slideSpeed:1000,
+        autoPlay:false
+    });
+    $(".field").on('focusin',function(){
+        $(this).next().addClass("active");
+    });
+
+    $(".field").on('focusout',function(){
+        var inputValue = $(this).val();
+        if(!inputValue) {
+            $(this).next().removeClass("active");
+        }
+    });
 
 });
 

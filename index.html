@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name=”description” content="Desarrollamos Software con calidad y modernidad que cubre todas del giro de tu negocio o proyecto. Plataforma Web, iOS, Android, PWA, App Web.">
         <title>FirstSoft - Desarrollo de Software Profesional</title>
         <!-- manifest -->
         <link rel="manifest" href="./manifest.json">
@@ -65,7 +66,7 @@
                     </button>
                     <a class="navbar-brand" href="#home">
                         <span class="logo-wraper logo-white">
-                            <img src="images/Logo.png" alt="logo" id="logo">FirstSoft
+                            <img src="images/Logo.png" alt="Logo principal" id="logo">FirstSoft
                         </span>
                     </a>
                 </div>
@@ -88,7 +89,7 @@
                 <div class="sliding-card-with-bottom-image text-center padding-top-90">
                     <h1 class="typewrite" data-period="1000" data-type='[ "Desarrollo Web", "Apps", "Diseño gráfico", "Aplicaciones progresivas" ]'></h1>
                     <div class="image-container text-center sm-display-none">
-                        <img class="img-responsive" src="images/header1.png" alt="">
+                        <img class="img-responsive" src="images/header1.png" alt="Imagen encabezado">
                     </div>
                 </div>
             </div>
@@ -147,7 +148,7 @@
                     </div>
                 </div>
                 <div class="col-sm-6 bg-image-fit-50" >
-                    <img src="./images/1_back.png" alt="Desarrollo web" class="img-responsive max-width-100">
+                    <img src="./images/1_back.png" alt="Desarrollo web" class="img-responsive max-width-100" alt="Diseño gráfico">
                 </div>
             </div>
         </div>
@@ -160,7 +161,7 @@
             </div>
             <div class="row">
                 <div class="col-md-4">
-                    <img class="img-responsive" src="images/hand_phone.png" alt="">
+                    <img class="img-responsive" src="images/hand_phone.png" alt="Aplicacióm móvil">
                 </div>
                 <div class="col-md-8">
                     <div class="row">
@@ -247,7 +248,7 @@
                     <div id="testimonial-slider" class="owl-carousel">
                         <div class="testimonial">
                             <div class="pic">
-                                <img src="./images/logotipo_flash_toner.png">
+                                <img src="./images/logotipo_flash_toner.png" alt="Cliente 1">
                             </div>
                             <div class="testimonial-content">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet eum excepturi incidunt
@@ -262,7 +263,7 @@
 
                         <div class="testimonial">
                             <div class="pic">
-                                <img src="./images/logotipo_oxxo.png">
+                                <img src="./images/logotipo_oxxo.png" alt="Cliente 12">
                             </div>
                             <div class="testimonial-content">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet eum excepturi incidunt
@@ -277,7 +278,7 @@
 
                         <div class="testimonial">
                             <div class="pic">
-                                <img src="./images/logotipo_soriana.png">
+                                <img src="./images/logotipo_soriana.png" alt="Cliente 3">
                             </div>
                             <div class="testimonial-content">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet eum excepturi incidunt
@@ -300,19 +301,26 @@
             <h2 class="titlesection">Contáctanos</h2>
                <div class="row">
                     <form action="#" method="post" class="wow fadeInUp" id="contact-form" role="form" data-wow-delay="0.8s">
-                        <h6 class="text-success">Tu mensaje ha sido enviado.</h6>
-                        <h6 class="text-danger">Error al enviar el mensaje</h6>
-                        <div class="col-md-6 col-sm-6">
+                        <!-- <div class="col-md-6 col-sm-6">
                             <input id="namefull" type="text" class="form-control" id="cf-name" name="name" placeholder="Nombre completo">
+                        </div> -->
+                        <div class="group col-md-6 col-sm-6">
+                            <input type="text" id="namefull" class="field">
+                            <label for="namefull">Nombre</label>
                         </div>
-                        <div class="col-md-6 col-sm-6">
-                            <input type="email" class="form-control" id="cf-email" name="email" placeholder="Correo" required>
+                        <div class="group col-md-6 col-sm-6">
+                            <input type="email" id="email" class="field" id="cf-email" required>
+                            <label for="email">Correo</label>
                         </div>
-                        <div class="col-md-12 col-sm-12">
-                            <input type="text" class="form-control" id="cf-subject" name="subject" placeholder="Tema">
-                            <textarea class="form-control" rows="6" id="cf-message" name="message" placeholder="Descripción"></textarea>
-                            <button type="submit" class="btn" id="cf-submit" name="submit">Enviar</button>
+                        <div class="group col-md-12 col-sm-12">
+                            <input type="text" class="field" id="cf-subject" name="subject">
+                            <label for="subject">Tema</label>
                         </div>
+                        <div class="group col-md-12 col-sm-12">
+                            <textarea class="field" rows="6" id="cf-message" name="message"></textarea>
+                            <label for="message">Mensaje</label>
+                        </div>
+                        <button type="submit" class="btn" id="cf-submit" name="submit">Enviar</button>
                     </form>
                 </div>
             </div>
@@ -323,7 +331,7 @@
                 <div class="col-md-8">
                     <div class="footer-left-content">
                         <div class="logo-colored">
-                            <img src="images/logo_color.png" alt="">FirstSoft
+                            <img src="images/logo_color.png" alt="Logo info">FirstSoft
                         </div>
                         <div class="content">
                             <p class="margin-bottom-30 margin-top-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, sint quod eaque praesentium iure! Minus, dolores vero, mollitia incidunt eum veniam libero delectus voluptate tenetur nisi itaque suscipit nihil vitae!</p>
